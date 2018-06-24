@@ -9,7 +9,7 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <img alt="burger" class="burger-pic" src="assets/img/burger.jpg"></img>
         </div>
     </div>
@@ -17,10 +17,11 @@
 
     <div class="row">
         <div class="col-sm-6">
+             <h2>UnDeVoUrEd BuRgErS</h2>
             {{#each burgers}}
                 {{#unless this.devoured}}
                     <div>
-                        <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                        <form action="/burgers/{{this.id}}?_method=PUT" method="PUT">
                             <button type="submit" class="burger-undevoured"> {{this.burger_name}}</button>
                         </form>
                     </div>
@@ -29,6 +30,7 @@
         </div>
 
         <div class="col-sm-6">
+            <h2>DeVoUrEd BuRgErS</h2> 
             {{#each burgers}}
                 {{#if this.devoured}}
                     <div class="burger-devoured">
@@ -41,36 +43,40 @@
         </div>
     </div>
 
-    <div class="row">
+    {{!-- <div class="row">
         <div class="col-sm-6">
             <form action="/" class="create-burger" method="POST">
                 <div class="form-group">
-                    <label for="burger">
+                <label for="burger">
                         Burger: 
                     </label>
-                    <input id="burger" name="burger" type="text"></input>
+                  
                 </div>      
             </form>
         </div>
-    </div>
+    </div> --}}
 
-</div>
 
-<div class="row">
+
+{{!-- <div class="row">
     <div class="col-s-12 text-center">
         <h2>
             Add a Burger: 
         </h2>
     </div>
-</div>
+</div> --}}
 
 <div class="row">
-    <div class="col-sm">
-        <form action="/burgers" method="POST">
-            <input type="text" id="name" name="burger_name" placeholder="Burger">
-                <button type="submit" class="addBurger">Add Burger</button>
-        </form>
+    <div class="col-sm-12">
+        <div id="burgerBox">
+            <form action="/burgers" method="POST">
+                <input type="text" id="name" name="burger_name" placeholder="Burger">
+                    <button type="submit" class="addBurger">Add Burger</button>
+            </form>
+        </div>
     </div>
+</div>
+
 </div>
 
 

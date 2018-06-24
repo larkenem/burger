@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(241, 190, 95);
+}
+
+.burger-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    /* width: 50%; */
+}
+
+#name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addBurger {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
